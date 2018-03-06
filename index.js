@@ -1,3 +1,7 @@
+var include = [__dirname];
+
 module.exports = {
-  include: __dirname
+  include: include.map(function(item) {
+    return '"' + item + '"';
+  }).join(' ')
 };
